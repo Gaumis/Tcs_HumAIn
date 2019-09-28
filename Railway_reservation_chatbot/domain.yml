@@ -1,0 +1,87 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- book_ticket
+- informori
+- informdes
+- informdate
+- thankyou
+- namei
+- cancel
+entities:
+- name
+- origin
+- destination
+- date
+slots:
+  date:
+    type: text
+  destination:
+    type: text
+  name:
+    type: text
+  origin:
+    type: text
+templates:
+  utter_greet:
+  - text: Hey I'm pooja! How are you?
+  - text: Hi How are you?
+  utter_sure:
+  - text: Sure I'll help to book Train ticket
+  utter_ask_origin:
+  - text: Please tell me your origin station
+  utter_ask_destination:
+  - text: Please tell me your destination station
+  utter_ask_date:
+  - text: Please tell on which date you want to book ticket
+  utter_confirm:
+  - text: Thank you {name}, I'm making reservation from {origin} to {destination}
+      on {date}
+  utter_see_you:
+  - text: Welcome {name}! You will see me soon
+  utter_deny:
+  - text: Sorry no train is available on {date} from {origin} to {destination}, Try
+      changing date
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_what_help:
+  - text: How can i help you today {name}
+  utter_happy:
+  - text: Great carry on! what is your name
+  utter_goodbye:
+  - text: Bye
+  utter_wait:
+  - text: Please wait while we are checking trains for you
+  utter_cancel_message:
+  - text: If a confirmed ticket is cancelled more than 48 hrs before the scheduled
+      departure of the train, flat cancellation charges shall be deducted Rs.240/-
+      for AC First Class/Executive Class, Rs.200/- for AC 2 Tier/First Class, Rs.
+      180 for AC 3 Tier/AC Chair car/ AC 3 Economy, Rs.120/- for Sleeper Class and
+      Rs.60/- for Second Class. Cancellation charges are per passenger. If a confirmed
+      ticket is cancelled within 48 hrs and up to 12 hours before the scheduled departure
+      of the train, cancellation charges shall be 25% of the fare subject to the minimum
+      flat rate mentioned in the above clause. Less than 12 hours and upto four hours
+      before the scheduled departure of the train up to chart preparation which is
+      earlier, 50% of the fare paid subject to the minimum cancellation charges. Note
+      the Chart preparation time is the time for the chart preparation from the Train
+      Originating Station or from the previous chart Preparation station.
+actions:
+- utter_greet
+- utter_sure
+- utter_ask_origin
+- utter_ask_destination
+- utter_ask_date
+- utter_confirm
+- utter_see_you
+- utter_cheer_up
+- utter_happy
+- utter_goodbye
+- utter_what_help
+- utter_deny
+- utter_wait
+- utter_cancel_message
